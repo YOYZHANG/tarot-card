@@ -7,10 +7,6 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
-openai.api_type = os.getenv("OPENAI_API_TYPE")
-openai.api_base = os.getenv("OPENAI_API_BASE")
-openai.api_version = os.getenv("OPENAI_API_VERSION")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 with open('talor.json') as talor_file:
@@ -72,7 +68,7 @@ if st.button('请抽取塔罗牌'):
 
     with st.spinner('加载解读中，请稍等 ......'):
         response = openai.ChatCompletion.create(
-            engine="gpt35",
+            model="gpt35",
             messages = [{"role":"system","content":"你是一位 Tarot cards 占卜师，采用 Taro Cross Spread 解读，你的任务是根据牌中展示的含义，解读被占卜者的过去，现状和未来。你的解答应基于对塔罗牌的理解，同时也要尽可能地展现出乐观和积极的态度，引导被占卜者朝着积极的方向发展。"},
                         {"role":"user","content":f"""
                             问题是：{question},
