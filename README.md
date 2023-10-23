@@ -1,7 +1,5 @@
-# Welcome to streamlit
+# 塔罗牌占卜小游戏
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+这是一款非常有趣的占卜休闲小游戏，又称神奇塔罗牌，运用的手法是塔罗牌大十字占卜法。你需要凭你的直觉，从二十二张塔罗牌中选取五张，然后，你就可以看到塔罗牌大十字占卜法的神秘了。赶紧来占卜一下吧！
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
-
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+# 注意

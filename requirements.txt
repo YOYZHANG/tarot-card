@@ -1,5 +1,3 @@
-altair
-numpy
-pandas
-pydeck
 streamlit
+openai
+python-dotenv
