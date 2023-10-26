@@ -71,7 +71,7 @@ if st.button('请抽取塔罗牌'):
 
     with st.spinner('加载解读中，请稍等 ......'):
         response = openai.ChatCompletion.create(
-            engine="gpt35",
+            engine="gpt-35-turbo",
             messages = [{"role":"system","content":"你是一位 Tarot cards 占卜师，采用 Taro Cross Spread 解读，你的任务是根据牌中展示的含义，解读被占卜者的过去，现状和未来。你的解答应基于对塔罗牌的理解，同时也要尽可能地展现出乐观和积极的态度，引导被占卜者朝着积极的方向发展。"},
                         {"role":"user","content":f"""
                             A位代表过去的状况，对应的牌展示的含义是：{result_arr[0]},
