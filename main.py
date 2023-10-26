@@ -55,7 +55,7 @@ def format_result(card_name, card_situation):
 if st.button('请抽取塔罗牌'):
     result_arr = []
     
-    for i in range(3):
+    for i in range(2):
         card_num = get_card_number()
         card_situation = get_card_situation()
         card_info = des_dict[f"{card_num}"]
@@ -76,7 +76,6 @@ if st.button('请抽取塔罗牌'):
                         {"role":"user","content":f"""
                             A位代表现在的状况，对应的牌展示的含义是：{result_arr[0]},
                             B位代表周遭的状况，对应的牌展示的含义是：{result_arr[1]},
-                            C位代表应该怎么做，对应的牌展示的含义是：{result_arr[2]},"""
                         }],
             temperature=0.7,
             max_tokens=500,
