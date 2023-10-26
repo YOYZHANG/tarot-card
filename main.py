@@ -55,7 +55,7 @@ def format_result(card_name, card_situation):
 if st.button('请抽取塔罗牌'):
     result_arr = []
     
-    for i in range(5):
+    for i in range(3):
         card_num = get_card_number()
         card_situation = get_card_situation()
         card_info = des_dict[f"{card_num}"]
@@ -74,11 +74,9 @@ if st.button('请抽取塔罗牌'):
             engine="gpt-35-turbo",
             messages = [{"role":"system","content":"你是一位 Tarot cards 占卜师，采用 Taro Cross Spread 解读，你的任务是根据牌中展示的含义，解读被占卜者的过去，现状和未来。你的解答应基于对塔罗牌的理解，同时也要尽可能地展现出乐观和积极的态度，引导被占卜者朝着积极的方向发展。"},
                         {"role":"user","content":f"""
-                            A位代表过去的状况，对应的牌展示的含义是：{result_arr[0]},
-                            B位代表现在的状况，对应的牌展示的含义是：{result_arr[1]},
-                            C位代表将来的状况，对应的牌展示的含义是：{result_arr[2]},
-                            D位代表周遭的状况，对应的牌展示的含义是：{result_arr[3]},
-                            E位代表应该怎么做，对应的牌展示的含义是：{result_arr[4]},"""
+                            A位代表现在的状况，对应的牌展示的含义是：{result_arr[0]},
+                            B位代表周遭的状况，对应的牌展示的含义是：{result_arr[1]},
+                            C位代表应该怎么做，对应的牌展示的含义是：{result_arr[2]},"""
                         }],
             temperature=0.7,
             max_tokens=500,
