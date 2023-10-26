@@ -21,8 +21,6 @@ st.set_page_config(
 
 st.write("## 塔罗牌占卜小游戏 🔮")
 
-st.sidebar.success("Select a demo above.")
-
 st.markdown(
     """
     请抽取卡牌， 来探寻自己吧 ❤️
